@@ -1,0 +1,22 @@
+<body>
+    <% if flash[:notice] %>
+        <div class="alert-primary" role="alert">
+            <%= notice %>
+        </div>
+    <% end %>
+
+
+    <p>
+    <strong>Title: </strong><%= @book.title %>
+    </p>
+
+    <p>
+    <strong>Body: </strong><%= @book.body %>
+    </p>
+
+    <div class="link">
+    <div class="a"><%= link_to "Edit",edit_book_path(@book.id) %></div>
+     |
+    <div class="a"><%= link_to "Back",'/books' %></div>
+    </div>
+</body>
